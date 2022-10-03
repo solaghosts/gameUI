@@ -1,0 +1,670 @@
+{
+	"textures": [
+		{
+			"image": "hero",
+			"format": "RGBA8888",
+			"size": {
+				"w": 80,
+				"h": 329
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "hero_attack_down_03",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 24,
+						"h": 30
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 24,
+						"h": 30
+					}
+				},
+				{
+					"filename": "hero_attack_left_01",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 1,
+						"w": 20,
+						"h": 30
+					},
+					"frame": {
+						"x": 0,
+						"y": 30,
+						"w": 20,
+						"h": 30
+					}
+				},
+				{
+					"filename": "hero_attack_right_01",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 1,
+						"w": 20,
+						"h": 30
+					},
+					"frame": {
+						"x": 0,
+						"y": 60,
+						"w": 20,
+						"h": 30
+					}
+				},
+				{
+					"filename": "hero_attack_up_01",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 1,
+						"w": 20,
+						"h": 30
+					},
+					"frame": {
+						"x": 0,
+						"y": 90,
+						"w": 20,
+						"h": 30
+					}
+				},
+				{
+					"filename": "hero_attack_up_03",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 1,
+						"w": 20,
+						"h": 30
+					},
+					"frame": {
+						"x": 0,
+						"y": 120,
+						"w": 20,
+						"h": 30
+					}
+				},
+				{
+					"filename": "hero_attack_down_01",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 1,
+						"w": 19,
+						"h": 30
+					},
+					"frame": {
+						"x": 0,
+						"y": 150,
+						"w": 19,
+						"h": 30
+					}
+				},
+				{
+					"filename": "hero_idle_down_01",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 1,
+						"w": 17,
+						"h": 30
+					},
+					"frame": {
+						"x": 0,
+						"y": 180,
+						"w": 17,
+						"h": 30
+					}
+				},
+				{
+					"filename": "hero_idle_up_01",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 1,
+						"w": 17,
+						"h": 30
+					},
+					"frame": {
+						"x": 0,
+						"y": 210,
+						"w": 17,
+						"h": 30
+					}
+				},
+				{
+					"filename": "hero_idle_down-left_01",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 1,
+						"w": 15,
+						"h": 30
+					},
+					"frame": {
+						"x": 0,
+						"y": 240,
+						"w": 15,
+						"h": 30
+					}
+				},
+				{
+					"filename": "hero_idle_right_01",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 1,
+						"w": 15,
+						"h": 30
+					},
+					"frame": {
+						"x": 0,
+						"y": 270,
+						"w": 15,
+						"h": 30
+					}
+				},
+				{
+					"filename": "hero_attack_down_02",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 25,
+						"h": 29
+					},
+					"frame": {
+						"x": 0,
+						"y": 300,
+						"w": 25,
+						"h": 29
+					}
+				},
+				{
+					"filename": "hero_attack_right_02",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 2,
+						"w": 24,
+						"h": 29
+					},
+					"frame": {
+						"x": 15,
+						"y": 240,
+						"w": 24,
+						"h": 29
+					}
+				},
+				{
+					"filename": "hero_attack_left_02",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 23,
+						"h": 29
+					},
+					"frame": {
+						"x": 15,
+						"y": 269,
+						"w": 23,
+						"h": 29
+					}
+				},
+				{
+					"filename": "hero_attack_up_02",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 5,
+						"y": 2,
+						"w": 22,
+						"h": 29
+					},
+					"frame": {
+						"x": 17,
+						"y": 180,
+						"w": 22,
+						"h": 29
+					}
+				},
+				{
+					"filename": "hero_attack_left_03",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 2,
+						"w": 21,
+						"h": 29
+					},
+					"frame": {
+						"x": 19,
+						"y": 150,
+						"w": 21,
+						"h": 29
+					}
+				},
+				{
+					"filename": "hero_attack_right_03",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 2,
+						"w": 21,
+						"h": 29
+					},
+					"frame": {
+						"x": 17,
+						"y": 209,
+						"w": 21,
+						"h": 29
+					}
+				},
+				{
+					"filename": "hero_idle_down_02",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 2,
+						"w": 17,
+						"h": 29
+					},
+					"frame": {
+						"x": 38,
+						"y": 209,
+						"w": 17,
+						"h": 29
+					}
+				},
+				{
+					"filename": "hero_idle_up_02",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 2,
+						"w": 17,
+						"h": 29
+					},
+					"frame": {
+						"x": 39,
+						"y": 179,
+						"w": 17,
+						"h": 29
+					}
+				},
+				{
+					"filename": "hero_walking_left_01",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 2,
+						"w": 16,
+						"h": 29
+					},
+					"frame": {
+						"x": 20,
+						"y": 30,
+						"w": 16,
+						"h": 29
+					}
+				},
+				{
+					"filename": "hero_walking_right_01",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 2,
+						"w": 16,
+						"h": 29
+					},
+					"frame": {
+						"x": 24,
+						"y": 0,
+						"w": 16,
+						"h": 29
+					}
+				},
+				{
+					"filename": "hero_walking_up_01",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 2,
+						"w": 16,
+						"h": 29
+					},
+					"frame": {
+						"x": 20,
+						"y": 59,
+						"w": 16,
+						"h": 29
+					}
+				},
+				{
+					"filename": "hero_walking_up_02",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 2,
+						"w": 16,
+						"h": 29
+					},
+					"frame": {
+						"x": 20,
+						"y": 88,
+						"w": 16,
+						"h": 29
+					}
+				},
+				{
+					"filename": "hero_walking_down_01",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 2,
+						"w": 15,
+						"h": 29
+					},
+					"frame": {
+						"x": 20,
+						"y": 117,
+						"w": 15,
+						"h": 29
+					}
+				},
+				{
+					"filename": "hero_walking_down_02",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 2,
+						"w": 15,
+						"h": 29
+					},
+					"frame": {
+						"x": 35,
+						"y": 117,
+						"w": 15,
+						"h": 29
+					}
+				},
+				{
+					"filename": "hero_walking_left_02",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 2,
+						"w": 15,
+						"h": 29
+					},
+					"frame": {
+						"x": 50,
+						"y": 117,
+						"w": 15,
+						"h": 29
+					}
+				},
+				{
+					"filename": "hero_walking_right_02",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 2,
+						"w": 15,
+						"h": 29
+					},
+					"frame": {
+						"x": 65,
+						"y": 117,
+						"w": 15,
+						"h": 29
+					}
+				},
+				{
+					"filename": "hero_idle_down-left_02",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 1,
+						"w": 15,
+						"h": 30
+					},
+					"frame": {
+						"x": 0,
+						"y": 240,
+						"w": 15,
+						"h": 30
+					}
+				},
+				{
+					"filename": "hero_idle_left_01",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 1,
+						"w": 15,
+						"h": 30
+					},
+					"frame": {
+						"x": 0,
+						"y": 240,
+						"w": 15,
+						"h": 30
+					}
+				},
+				{
+					"filename": "hero_idle_left_02",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 1,
+						"w": 15,
+						"h": 30
+					},
+					"frame": {
+						"x": 0,
+						"y": 240,
+						"w": 15,
+						"h": 30
+					}
+				},
+				{
+					"filename": "hero_idle_up-left_01",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 1,
+						"w": 15,
+						"h": 30
+					},
+					"frame": {
+						"x": 0,
+						"y": 240,
+						"w": 15,
+						"h": 30
+					}
+				},
+				{
+					"filename": "hero_idle_up-left_02",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 1,
+						"w": 15,
+						"h": 30
+					},
+					"frame": {
+						"x": 0,
+						"y": 240,
+						"w": 15,
+						"h": 30
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "http://free-tex-packer.com",
+		"version": "0.6.7"
+	}
+}

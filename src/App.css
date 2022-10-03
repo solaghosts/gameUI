@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Press Start 2P';
+  src: url('PressStart2P-Regular.ttf') format('opentype'),
+  url('PressStart2P-Regular.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*To change the size of the game canvas, this will be an option inside the game, so users can decide which size they want to use*/
+canvas {
+  transform: scale(1.3);
+}
