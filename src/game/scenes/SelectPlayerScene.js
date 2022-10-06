@@ -11,7 +11,7 @@ export default class SelectPlayerScene extends Scene {
 
     create() {
         
-        const { width: gameWidth, height: gameHeight } = this.cameras.main;
+        //const { width: gameWidth, height: gameHeight } = this.cameras.main;
 
 
         const customEvent = new CustomEvent('menu-items', {
@@ -38,6 +38,7 @@ export default class SelectPlayerScene extends Scene {
                             haveSword: false,
                         },
                         mapKey: 'home_page_city_house_01',
+                        tileset: "tilesets",
                     });
                     break;
                 }

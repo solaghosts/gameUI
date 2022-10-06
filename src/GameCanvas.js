@@ -91,7 +91,7 @@ function GameCanvas() {
 
   useEffect(() => {
     const game = new Phaser.Game({
-      type: Phaser.AUTO,
+      type: Phaser.CANVAS, //for some reason, Phaser.AUTO blur the canvas on iOS devices BUT ENEMIES SHOW IN THEIR RESPECTIVE COOLOR SO, TODO.
       title: 'some-game-title',
       parent: 'game-content',
       orientation: Phaser.Scale.LANDSCAPE,
@@ -114,7 +114,7 @@ function GameCanvas() {
       physics: {
         default: 'arcade',
         arcade: {
-          debug: false,
+          debug: true,
       }
       },
       plugins: {
@@ -129,7 +129,7 @@ function GameCanvas() {
       backgroundColor: '#000000',
     });
 
-    window.phaserGame = game;
+    //window.phaserGame = game;
   }, []);
 
   useEffect(() => {

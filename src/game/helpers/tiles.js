@@ -1,10 +1,32 @@
-import { Math as PhaserMath } from 'phaser';
-import {
-    ATTACK_DELAY_TIME,
-    BOX_INDEX,
-    BUSH_INDEX,
-    SCENE_FADE_TIME,
-} from '../components/constants';
+
+//To load any map in any game scene
+export const handleCreateMap = (scene) => {
+    //Receive the data from the previous scene in the next scene
+    const { mapKey } = scene.initData;
+    const map = scene.make.tilemap({ key: mapKey });
+    //create the representation image of each tileset json for that tilemap in the canvas
+    var maptilesets = [];
+    for (let i = 0; i < map.tilesets.length; i++){
+        const mapTileset = map.addTilesetImage(map.tilesets[i].name);
+        maptilesets.push(mapTileset)
+    }
+
+    // eslint-disable-next-line no-param-reassign
+    //To use the scene.map variable in the functions above.
+    return scene.map = map;
+
+};
+
+//This function read and add the data of each layer in the json, using the tilesets with the img of the tiles as reference. 
+export const handleCreateLayers = (scene) => {
+
+    scene.elementsLayers = scene.add.group();
+    for (let i = 0; i < scene.map.layers.length; i++) {
+        //Changed it because you need to create a layer for each tileset that you want to set in the game
+        scene.layer = scene.map.createLayer(scene.map.layers[i].name, scene.map.tilesets, 0, 0);
+        scene.elementsLayers.add(scene.layer);
+    }
+};
 
 //to animate tiles in the gameScene.
 export const handleCreateTilesData = (scene) => {
@@ -48,33 +70,3 @@ export const handleAnimateTiles = (scene, delta) => {
     });
     
 };
-
-
-
-//To generate the actions with the weapon like cut grass or move blocks
-export const handleUpdate = (scene) => {
-    
- 
-    //Create a collision action when user presence collider box collides with current tilemaplayers
-    scene.physics.add.overlap(scene.heroPresenceCollider, scene.elementsLayers, (objA, objB) => {
-        const tile = [objA, objB].find((obj) => obj !== scene.heroPresenceCollider);
-        
-        // Handles attack
-        if (tile.index === 784 ) {
-            scene.animatedTiles.forEach((animatedTile) => {
-                let tileAnimationIndexs = animatedTile.tileData.map(a => a.tileid);
-                for (let i = 0; i < tileAnimationIndexs.length; i++){
-
-                    //animatedTile.tile.index=tileAnimationIndexs[i];
-                }
-            })
-            //Object.values(scene.animatedTiles)[1].index= ++demo 
-            //tile.index=428 
-
-        }
-
-                
-        
-    });
-
-}

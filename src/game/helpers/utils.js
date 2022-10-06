@@ -1,39 +1,5 @@
 import { GameObjects, Input } from 'phaser';
 
-//To load any map in any game scene
-export const handleCreateMap = (scene) => {
-    //Receive the data from the previous scene in scene scene
-    const { mapKey } = scene.initData;
-    const map = scene.make.tilemap({ key: mapKey });
-    //create the representation image of each tileset json for that tilemap in the canvas
-    var maptilesets = [];
-    for (let i = 0; i < map.tilesets.length; i++){
-        const mapTileset = map.addTilesetImage(map.tilesets[i].name);
-        maptilesets.push(mapTileset)
-    }
-
-    // eslint-disable-next-line no-param-reassign
-    scene.map = map;
-
-};
-
-export const handleCreateLayers = (scene) => {
-    
-    scene.elementsLayers = scene.add.group();
-    for (let i = 0; i < scene.map.layers.length; i++) {
-        //scene.layer = scene.map.createLayer(i, 'tileset', 0, 0);
-        
-        //Changed it because you need to create a layer for each tileset that you want to set in the game
-        scene.layer = scene.map.createLayer(scene.map.layers[i].name, scene.map.tilesets, 0, 0);
-        scene.layer.layer.properties.forEach((property) => {
-            const { value, name } = property;
-            if (name === 'type' && value === 'elements') {
-                scene.elementsLayers.add(scene.layer);
-            }
-        });
-    }
-
-};
 
 export const handleConfigureCamera = (scene) => {
     //Cameras follow the player
@@ -42,6 +8,8 @@ export const handleConfigureCamera = (scene) => {
     //scene.cameras.main.setFollowOffset(-16,-18);
     //With canvas scale to 1.3
     scene.cameras.main.setFollowOffset(35,10);
+    //with canvas scale to 0
+    //scene.cameras.main.setFollowOffset(-16,-16);
   };
   
 export const handleConfigureGridEngine = (scene) => {
@@ -60,9 +28,11 @@ export const handleConfigureGridEngine = (scene) => {
     numberOfDirections: 8,
   };
   
-  //Add the grid engine config for the character movement in the tilemap inside the canvas
-  scene.gridEngine.create(scene.map, scene.gridEngineConfig);
-  
+};
+
+//For some reason is neccesary separate the create grid engine from the config grid engine. 
+export const handleGridEngine = (scene) => {
+    scene.gridEngine.create(scene.map, scene.gridEngineConfig);
 };
 
 //to create the controls to handle the movement 

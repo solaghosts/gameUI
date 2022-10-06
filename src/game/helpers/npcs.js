@@ -3,6 +3,10 @@ import {
     NPC_MOVEMENT_RANDOM,
 } from '../components/constants';
 
+import { 
+    createPlayerWalkingAnimation,
+} from '../helpers/animations';
+
 //to extract the enemies data from the tileset
 export const handleCreateNpcsData = (scene) => {
 
@@ -50,15 +54,16 @@ export const handleAddNpcs = (scene) => {
         //npc.body.setOffset(9, 13);
         scene.npcSprites.add(npc);
 
-        scene.createPlayerWalkingAnimation(npcKey, 'walking_up');
-        scene.createPlayerWalkingAnimation(npcKey, 'walking_right');
-        scene.createPlayerWalkingAnimation(npcKey, 'walking_down');
-        scene.createPlayerWalkingAnimation(npcKey, 'walking_left');
-
-        scene.createPlayerWalkingAnimation(npcKey, 'walking_up-left');
-        scene.createPlayerWalkingAnimation(npcKey, 'walking_up-right');
-        scene.createPlayerWalkingAnimation(npcKey, 'walking_down-left');
-        scene.createPlayerWalkingAnimation(npcKey, 'walking_down-right');
+        // Create the sprite movement animation using the spritesheet aka the png files
+        createPlayerWalkingAnimation(scene, npcKey, 'walking_up');
+        createPlayerWalkingAnimation(scene, npcKey, 'walking_right');
+        createPlayerWalkingAnimation(scene, npcKey, 'walking_down');
+        createPlayerWalkingAnimation(scene, npcKey, 'walking_left');
+        //diagonal movement
+        createPlayerWalkingAnimation(scene, npcKey, 'walking_up-left');
+        createPlayerWalkingAnimation(scene, npcKey, 'walking_up-right');
+        createPlayerWalkingAnimation(scene, npcKey, 'walking_down-left');
+        createPlayerWalkingAnimation(scene, npcKey, 'walking_down-right');
 
         scene.gridEngineConfig.characters.push({
             id: npcKey,
@@ -119,21 +124,6 @@ export const handleNpcsSpriteMovement = (scene) => {
     });
     
 };
-
-
-export const createPlayerWalkingAnimation = (scene, assetKey, animationName) => {
-    scene.anims.create({
-        key: `${assetKey}_${animationName}`,
-        frames: [
-            { key: assetKey, frame: `${assetKey}_${animationName}_01` },
-            { key: assetKey, frame: `${assetKey}_${animationName.replace('walking', 'idle')}_01` },
-            { key: assetKey, frame: `${assetKey}_${animationName}_02` },
-        ],
-        frameRate: 7,
-        repeat: -1,
-        yoyo: true,
-    });
-}
 
 export const extractNpcDataFromTiled = (data) => {
     const [npcKey, config] = data.trim().split(':');

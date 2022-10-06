@@ -17,7 +17,7 @@ export default class MainMenuScene extends Scene {
             .setOrigin(0.5, 0)
             .setDepth(1);
 
-        const scale = Math.max(Math.ceil(gameWidth / 480), Math.ceil(gameHeight / 216));
+        //const scale = Math.max(Math.ceil(gameWidth / 480), Math.ceil(gameHeight / 216));
         this.add.image(0, 0, 'main_menu_background')
             .setScale(1.2)
             .setDepth(0)

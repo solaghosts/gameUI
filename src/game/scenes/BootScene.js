@@ -4,6 +4,7 @@ import { Scene } from 'phaser';
 import tiles from '../assets/sprites/maps/tilesets/tileset.png'
 import actionTiles from '../assets/sprites/maps/tilesets/actions_tileset.png';
 import actiontiles2 from '../assets/sprites/maps/tilesets/actiontiles.png'
+import dungeon from '../assets/sprites/maps/tilesets/dungeon.png'
 
 // Houses files
 import homePageHouse01Map from '../assets/sprites/maps/houses/home_page_city_house_01.json';
@@ -137,11 +138,17 @@ export default class BootScene extends Scene {
             assetText.destroy();
         });
 
-        // Maps
+        // Tilemaps
         this.load.tilemapTiledJSON('home_page_city', homePageCity);
         this.load.tilemapTiledJSON('home_page_city_house_01', homePageHouse01Map);
         this.load.tilemapTiledJSON('home_page_city_house_02', homePageHouse02Map);
         this.load.tilemapTiledJSON('home_page_city_house_03', homePageHouse03Map);
+
+        // Tilesets
+        this.load.image('tileset', tiles);
+        this.load.image('actions_tileset', actionTiles);
+        this.load.image('actiontiles', actiontiles2);
+        this.load.image('dungeon', dungeon);
 
         // Atlas
         this.load.atlas('hero', heroImage, heroJson);
@@ -154,11 +161,6 @@ export default class BootScene extends Scene {
         this.load.atlas('npc_02', npc02Image, npc02Json);
         this.load.atlas('npc_03', npc03Image, npc03Json);
         this.load.atlas('npc_04', npc04Image, npc04Json);
-
-        // Tilesets
-        this.load.image('tileset', tiles);
-        this.load.image('actions_tileset', actionTiles);
-        this.load.image('actiontiles', actiontiles2);
 
         // Images
         this.load.image('main_menu_background', mainMenuBackgroundImage);

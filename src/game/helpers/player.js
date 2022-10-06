@@ -7,6 +7,13 @@ import {
     SCENE_FADE_TIME,
 } from '../components/constants';
 
+import { 
+    createPlayerIdleAnimation,
+    createPlayerWalkingAnimation,
+    createPlayerAttackAnimation,
+} from '../helpers/animations';
+
+
 //To create the hero inside the canvas in each scene
 export const handleCreateHero = (scene) => {
     //Destructure data from player in the scene
@@ -25,12 +32,17 @@ export const handleCreateHero = (scene) => {
     .sprite(0, 0, 'hero', initialFrame)
     .setDepth(1);
 
+    //Set the size of the character inside the canvas
+    scene.playerSprite.body.setSize(16, 16);
+    //Set the body size of the character exaclty inside a tile (16x16) per movement. 
+    scene.playerSprite.body.setOffset(8, 16);
+
     //?????
     scene.playerSprite.health = heroHealth;
     scene.playerSprite.maxHealth = heroMaxHealth;
     scene.playerSprite.coin = heroCoin;
     scene.playerSprite.canPush = heroCanPush;
-    scene.playerSprite.haveSword = false;
+    scene.playerSprite.haveSword = heroHaveSword;
 
     updateHeroHealthUi(calculateHeroHealthStates(scene));
     updateHeroCoinUi(heroCoin);
@@ -84,65 +96,66 @@ export const handleCreateHero = (scene) => {
         );
     };
 
-        scene.playerSprite.body.setSize(16, 16);
-        //scene.playerSprite.body.setOffset(9, 13);
-        scene.heroActionCollider = createInteractiveGameObject(
-            scene,
-            scene.playerSprite.x + 9,
-            scene.playerSprite.y + 36,
-            14,
-            8,
-            'attack',
-            isDebugMode
-        );
-        scene.heroPresenceCollider = createInteractiveGameObject(
-            scene,
-            scene.playerSprite.x + 16,
-            scene.playerSprite.y + 20,
-            176, // TODO
-            176, // TODO
-            'presence',
-            isDebugMode,
-            { x: 0.5, y: 0.5 }
-        );
-        scene.heroObjectCollider = createInteractiveGameObject(
-            scene,
-            scene.playerSprite.x + 16,
-            scene.playerSprite.y + 20,
-            24,
-            24,
-            'object',
-            isDebugMode,
-            { x: 0.5, y: 0.5 }
-        );
+    //Create the action that happen when player an enemy collides
+    scene.heroActionCollider = createInteractiveGameObject(
+        scene,
+        scene.playerSprite.x + 9,
+        scene.playerSprite.y + 36,
+        14, //before was 14
+        8, //before was 8
+        'attack',
+        isDebugMode
+    );
+    //Create a big presence square that let enemies notes when a player is close. Or to do stuff when player is inside a range
+    scene.heroPresenceCollider = createInteractiveGameObject(
+        scene,
+        scene.playerSprite.x + 16,
+        scene.playerSprite.y + 20,
+        176, // TODO
+        176, // TODO
+        'presence',
+        isDebugMode,
+        { x: 0.5, y: 0.5 }
+    );
+    //Create the action that happen when player and item/object, teleport or dialog data collides
+    scene.heroObjectCollider = createInteractiveGameObject(
+        scene,
+        scene.playerSprite.x + 16,
+        scene.playerSprite.y + 16,
+        16,
+        16,
+        'object',
+        isDebugMode,
+        { x: 0.5, y: 0.5 }
+    );
 
-        // idle
-        scene.createPlayerIdleAnimation('hero', 'idle_up');
-        scene.createPlayerIdleAnimation('hero', 'idle_right');
-        scene.createPlayerIdleAnimation('hero', 'idle_down');
-        scene.createPlayerIdleAnimation('hero', 'idle_left');
+        // idle animation (to show the character in movement when is in idle position AKA doing nothing)
+        createPlayerIdleAnimation(scene, 'hero', 'idle_up');
+        createPlayerIdleAnimation(scene, 'hero', 'idle_right');
+        createPlayerIdleAnimation(scene, 'hero', 'idle_down');
+        createPlayerIdleAnimation(scene, 'hero', 'idle_left');
+        //diagonal idle
+        createPlayerIdleAnimation(scene, 'hero', 'idle_up-left');
+        createPlayerIdleAnimation(scene, 'hero', 'idle_up-right');
+        createPlayerIdleAnimation(scene, 'hero', 'idle-left');
+        createPlayerIdleAnimation(scene, 'hero', 'idle-right');
 
-        scene.createPlayerIdleAnimation('hero', 'idle_up-left');
-        scene.createPlayerIdleAnimation('hero', 'idle_up-right');
-        scene.createPlayerIdleAnimation('hero', 'idle-left');
-        scene.createPlayerIdleAnimation('hero', 'idle-right');
+        // Create the sprite movement animation using the spritesheet aka the png files
+        createPlayerWalkingAnimation(scene, 'hero', 'walking_up');
+        createPlayerWalkingAnimation(scene, 'hero', 'walking_right');
+        createPlayerWalkingAnimation(scene, 'hero', 'walking_down');
+        createPlayerWalkingAnimation(scene, 'hero', 'walking_left');
+        //diagonal movement
+        createPlayerWalkingAnimation(scene, 'hero', 'walking_up-left');
+        createPlayerWalkingAnimation(scene, 'hero', 'walking_up-right');
+        createPlayerWalkingAnimation(scene, 'hero', 'walking_down-left');
+        createPlayerWalkingAnimation(scene, 'hero', 'walking_down-right');
 
-        // Movement
-        scene.createPlayerWalkingAnimation('hero', 'walking_up');
-        scene.createPlayerWalkingAnimation('hero', 'walking_right');
-        scene.createPlayerWalkingAnimation('hero', 'walking_down');
-        scene.createPlayerWalkingAnimation('hero', 'walking_left');
-
-        scene.createPlayerWalkingAnimation('hero', 'walking_up-left');
-        scene.createPlayerWalkingAnimation('hero', 'walking_up-right');
-        scene.createPlayerWalkingAnimation('hero', 'walking_down-left');
-        scene.createPlayerWalkingAnimation('hero', 'walking_down-right');
-
-        // Attack
-        scene.createPlayerAttackAnimation('hero', 'attack_up', 12, 0, false);
-        scene.createPlayerAttackAnimation('hero', 'attack_right', 12, 0, false);
-        scene.createPlayerAttackAnimation('hero', 'attack_down', 12, 0, false);
-        scene.createPlayerAttackAnimation('hero', 'attack_left', 12, 0, false);
+        // Create the sprite attack animation using the spritesheet aka the png files
+        createPlayerAttackAnimation(scene, 'hero', 'attack_up', 12, 0, false);
+        createPlayerAttackAnimation(scene, 'hero', 'attack_right', 12, 0, false);
+        createPlayerAttackAnimation(scene, 'hero', 'attack_down', 12, 0, false);
+        createPlayerAttackAnimation(scene, 'hero', 'attack_left', 12, 0, false);
 
         scene.playerSprite.on('animationcomplete', (animation, animationFrame) => {
             if (animation.key.includes('attack')) {
@@ -625,5 +638,33 @@ export const getStopFrame = (direction, spriteKey) => {
         default:
             return null;
     }
+}
+
+//(IDK WHY I MADE THIS CODE, BUT ITS NOT IN USE RIGHT NOW) To generate the actions with the weapon like cut grass or move blocks
+export const handleUpdate = (scene) => {
+    
+ 
+    //Create a collision action when user presence collider box collides with current tilemaplayers
+    scene.physics.add.overlap(scene.heroPresenceCollider, scene.elementsLayers, (objA, objB) => {
+        const tile = [objA, objB].find((obj) => obj !== scene.heroPresenceCollider);
+        
+        // Handles attack
+        if (tile.index === 784 ) {
+            scene.animatedTiles.forEach((animatedTile) => {
+                let tileAnimationIndexs = animatedTile.tileData.map(a => a.tileid);
+                for (let i = 0; i < tileAnimationIndexs.length; i++){
+
+                    //animatedTile.tile.index=tileAnimationIndexs[i];
+                }
+            })
+            //Object.values(scene.animatedTiles)[1].index= ++demo 
+            //tile.index=428 
+
+        }
+
+                
+        
+    });
+
 }
 

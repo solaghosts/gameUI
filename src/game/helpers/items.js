@@ -4,6 +4,10 @@ import {
     SCENE_FADE_TIME,
 } from '../components/constants';
 
+import { 
+    getFramesForAnimation,
+} from '../helpers/animations';
+
 //to extract the items data from the tileset
 export const handleCreateItemsData = (scene) => {
 
@@ -236,7 +240,7 @@ export const handleItemsSpriteMovement = (scene) => {
         if (!scene.anims.exists('heart_idle')) {
             scene.anims.create({
                 key: 'heart_idle',
-                frames: scene.getFramesForAnimation('heart', 'idle'),
+                frames: getFramesForAnimation(scene, 'heart', 'idle'),
                 frameRate: 4,
                 repeat: -1,
                 yoyo: false,
@@ -246,7 +250,7 @@ export const handleItemsSpriteMovement = (scene) => {
         if (!scene.anims.exists('coin_idle')) {
             scene.anims.create({
                 key: 'coin_idle',
-                frames: scene.getFramesForAnimation('coin', 'idle'),
+                frames: getFramesForAnimation(scene, 'coin', 'idle'),
                 frameRate: 4,
                 repeat: -1,
                 yoyo: false,

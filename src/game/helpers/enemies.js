@@ -3,6 +3,10 @@ import {
     ENEMY_AI_TYPE,
 } from '../components/constants';
 
+import { 
+    getFramesForAnimation,
+} from '../helpers/animations';
+
 //to extract the enemies data from the tileset
 export const handleCreateEnemiesData = (scene) => {
 
@@ -81,7 +85,7 @@ export const handleAddEnemies = (scene) => {
         if (!scene.anims.exists(`${enemySpecies}_idle`)) {
             scene.anims.create({
                 key: `${enemySpecies}_idle`,
-                frames: scene.getFramesForAnimation(enemySpecies, 'idle'),
+                frames: getFramesForAnimation(scene, enemySpecies, 'idle'),
                 frameRate: 8,
                 repeat: -1,
                 yoyo: false,
@@ -91,7 +95,7 @@ export const handleAddEnemies = (scene) => {
         if (!scene.anims.exists(`${enemySpecies}_attack`)) {
             scene.anims.create({
                 key: `${enemySpecies}_attack`,
-                frames: scene.getFramesForAnimation(enemySpecies, 'attack'),
+                frames: getFramesForAnimation(scene, enemySpecies, 'attack'),
                 frameRate: 12,
                 repeat: 0,
                 yoyo: false,
@@ -101,7 +105,7 @@ export const handleAddEnemies = (scene) => {
         if (!scene.anims.exists(`${enemySpecies}_walking`)) {
             scene.anims.create({
                 key: `${enemySpecies}_walking`,
-                frames: scene.getFramesForAnimation(enemySpecies, 'walking'),
+                frames: getFramesForAnimation(scene, enemySpecies, 'walking'),
                 frameRate: 8,
                 repeat: -1,
                 yoyo: false,
@@ -111,7 +115,7 @@ export const handleAddEnemies = (scene) => {
         if (!scene.anims.exists(`${enemySpecies}_die`)) {
             scene.anims.create({
                 key: `${enemySpecies}_die`,
-                frames: scene.getFramesForAnimation(enemySpecies, 'die'),
+                frames: getFramesForAnimation(scene, enemySpecies, 'die'),
                 frameRate: 8,
                 repeat: 0,
                 yoyo: false,
