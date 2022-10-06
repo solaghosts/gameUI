@@ -16,8 +16,8 @@ export default class SelectPlayerScene extends Scene {
 
         const customEvent = new CustomEvent('menu-items', {
             detail: {
-                menuItems: ['New Game', 'Load Game', 'Options'],
-                menuPosition: 'center',
+                menuItems: ['New Game', 'Load Game', 'Options', 'Options2', 'Demo', 'Go Back'],
+                menuPosition: 'left',
             },
         });
 
@@ -48,7 +48,8 @@ export default class SelectPlayerScene extends Scene {
                     break;
                 }
 
-                case 'settings': {
+                case 'Go Back': {
+                    this.scene.start('MainMenuScene')
                     break;
                 }
 

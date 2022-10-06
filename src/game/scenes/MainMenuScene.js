@@ -10,14 +10,7 @@ export default class MainMenuScene extends Scene {
     }
 
     create() {
-        
-        const { width: gameWidth, height: gameHeight } = this.cameras.main;
-
-        this.add.image(gameWidth / 2, Math.ceil(gameHeight / 10), 'game_logo')
-            .setOrigin(0.5, 0)
-            .setDepth(1);
-
-        //const scale = Math.max(Math.ceil(gameWidth / 480), Math.ceil(gameHeight / 216));
+        //Add the background img to the scene
         this.add.image(0, 0, 'main_menu_background')
             .setScale(1.2)
             .setDepth(0)
@@ -31,6 +24,7 @@ export default class MainMenuScene extends Scene {
         });
 
         window.dispatchEvent(customEvent);
+        
         const gameMenuSelectedEventListener = ({ detail }) => {
             switch (detail.selectedItem) {
                 case 'New Game': {

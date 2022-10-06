@@ -5,11 +5,12 @@ import classNames from 'classnames';
 const useStyles = makeStyles((theme) => ({
     menuWrapper: ({ multiplier }) => ({
         fontFamily: '"Press Start 2P"',
-        fontSize: `${10 * multiplier}px`,
+        fontSize: `${12 * multiplier}px`,
         textTransform: 'uppercase',
         position: 'absolute',
         transform: 'translate(-50%, 0%)',
     }),
+
     menuPositionWrapper: ({ multiplier, position, width, height }) => {
         const left = window.innerWidth - (width * multiplier);
         const menuWidth = 160 * multiplier;
@@ -17,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
             return {
                 minWidth: `${menuWidth}px`,
                 left: '50%',
-                top: `${(height * multiplier) / 2}px`,
+                top: '50%',
             };
         }
 
@@ -25,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
             return {
                 minWidth: `${menuWidth}px`,
                 left: `${(95 * multiplier) + left / 2}px`,
-                top: `${50 * multiplier}px`,
+                top: '5%',
             };
         }
 
@@ -44,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
         border: `${multiplier}px solid #79584f`,
     }),
     selectedMenuItem: ({ multiplier }) => ({
-        fontSize: `${11 * multiplier}px`,
+        fontSize: `${14 * multiplier}px`,
         border: `${multiplier}px solid #ddd`,
     }),
 }));

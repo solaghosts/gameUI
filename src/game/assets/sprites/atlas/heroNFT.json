@@ -1,0 +1,55 @@
+{
+    "name": "Solaghost #2399",
+    "symbol": "",
+    "description": "The strongest warriors in Solagea!!",
+    "seller_fee_basis_points": 500,
+    "image": "https://www.arweave.net/hmNVRHl3x7eQ5ooRy5PEoJchnrw9g3vKoPW6pLp3ccM?ext=png",
+    "external_url": "solaghosts.io",
+    "attributes": [
+        {
+            "trait_type": "Gender",
+            "value": "Female3"
+        },
+        {
+            "trait_type": "Age",
+            "value": "21 years old"
+        },
+        {
+            "trait_type": "Personality",
+            "value": "Melancholic"
+        },
+        {
+            "trait_type": "Eyes",
+            "value": "Red"
+        },
+        {
+            "trait_type": "Accesories",
+            "value": "None"
+        },
+        {
+            "trait_type": "Class",
+            "value": "Purple alchemist"
+        }
+    ],
+    "collection": {
+        "name": "Solagea Warrios",
+        "family": "Solaghosts"
+    },
+    "properties": {
+        "json": "https://raw.githubusercontent.com/solaghosts/gameUI/main/src/game/assets/sprites/atlas/hero.json",
+        "spritesheet":"https://raw.githubusercontent.com/solaghosts/gameUI/main/src/game/assets/sprites/atlas/hero.png",
+        "files": [
+            {
+                "uri": "https://www.arweave.net/hmNVRHl3x7eQ5ooRy5PEoJchnrw9g3vKoPW6pLp3ccM?ext=png",
+                "type": "image/png"
+            }
+        ],
+        "category": "image",
+        "creators": [
+            {
+                "address": "DEYF3CftR9GawFjnA3JRh5NVvQCqKEk6eopkFympkH4D",
+                "share": 100
+            }
+        ]
+    }
+}
