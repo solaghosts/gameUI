@@ -3,7 +3,7 @@
     "symbol": "",
     "description": "The strongest warriors in Solagea!!",
     "seller_fee_basis_points": 500,
-    "image": "https://www.arweave.net/hmNVRHl3x7eQ5ooRy5PEoJchnrw9g3vKoPW6pLp3ccM?ext=png",
+    "image": "https://raw.githubusercontent.com/solaghosts/gameUI/main/src/game/assets/sprites/atlas/heroNFT.png",
     "external_url": "solaghosts.io",
     "attributes": [
         {
@@ -40,7 +40,7 @@
         "spritesheet":"https://raw.githubusercontent.com/solaghosts/gameUI/main/src/game/assets/sprites/atlas/hero.png",
         "files": [
             {
-                "uri": "https://www.arweave.net/hmNVRHl3x7eQ5ooRy5PEoJchnrw9g3vKoPW6pLp3ccM?ext=png",
+                "uri": "https://raw.githubusercontent.com/solaghosts/gameUI/main/src/game/assets/sprites/atlas/heroNFT.png",
                 "type": "image/png"
             }
         ],
