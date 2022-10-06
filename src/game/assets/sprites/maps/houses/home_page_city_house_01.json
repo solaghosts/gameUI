@@ -196,7 +196,7 @@
         {
          "columns":39,
          "firstgid":1,
-         "image":"..\/tilesets\/tileset.png",
+         "image":"https://raw.githubusercontent.com/solaghosts/gameUI/main/src/game/assets/sprites/maps/tilesets/tileset.png",
          "imageheight":816,
          "imagewidth":624,
          "margin":0,
@@ -16071,7 +16071,7 @@
         {
          "columns":16,
          "firstgid":1990,
-         "image":"..\/tilesets\/actions_tileset.png",
+         "image":"https://raw.githubusercontent.com/solaghosts/gameUI/main/src/game/assets/sprites/maps/tilesets/actions_tileset.png",
          "imageheight":640,
          "imagewidth":256,
          "margin":0,
@@ -16415,7 +16415,7 @@
         {
          "columns":11,
          "firstgid":2630,
-         "image":"..\/tilesets\/dungeon.png",
+         "image":"https://raw.githubusercontent.com/solaghosts/gameUI/main/src/game/assets/sprites/maps/tilesets/dungeon.png",
          "imageheight":256,
          "imagewidth":176,
          "margin":0,
@@ -16537,7 +16537,7 @@
         {
          "columns":6,
          "firstgid":2806,
-         "image":"..\/tilesets\/actiontiles.png",
+         "image":"https://raw.githubusercontent.com/solaghosts/gameUI/main/src/game/assets/sprites/maps/tilesets/actiontiles.png",
          "imageheight":64,
          "imagewidth":96,
          "margin":0,

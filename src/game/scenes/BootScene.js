@@ -15,7 +15,7 @@ import homePageHouse03Map from '../assets/sprites/maps/houses/home_page_city_hou
 import homePageCity from '../assets/sprites/maps/cities/home_page_city.json';
 
 // Characters files
-import heroJson from '../assets/sprites/atlas/hero.json';
+//import heroJson from '../assets/sprites/atlas/hero.json';
 import slimeJson from '../assets/sprites/atlas/slime.json';
 import heartJson from '../assets/sprites/atlas/heart.json';
 import coinJson from '../assets/sprites/atlas/coin.json';
@@ -27,7 +27,7 @@ import npc03Json from '../assets/sprites/atlas/npc_03.json';
 import npc04Json from '../assets/sprites/atlas/npc_04.json';
 
 // Images
-import heroImage from '../assets/sprites/atlas/hero.png';
+//import heroImage from '../assets/sprites/atlas/hero.png';
 import slimeImage from '../assets/sprites/atlas/slime.png';
 import heartImage from '../assets/sprites/atlas/heart.png';
 import coinImage from '../assets/sprites/atlas/coin.png';
@@ -59,13 +59,13 @@ export default class BootScene extends Scene {
         this.load.tilemapTiledJSON('home_page_city_house_03', homePageHouse03Map);
 
         // Tilesets img
-        this.load.image('tileset', tiles);
-        this.load.image('actions_tileset', actionTiles);
-        this.load.image('actiontiles', actiontiles2);
-        this.load.image('dungeon', dungeon);
+        this.load.image('tileset', 'https://raw.githubusercontent.com/solaghosts/gameUI/main/src/game/assets/sprites/maps/tilesets/tileset.png');
+        this.load.image('actions_tileset', 'https://raw.githubusercontent.com/solaghosts/gameUI/main/src/game/assets/sprites/maps/tilesets/actions_tileset.png');
+        this.load.image('actiontiles', 'https://raw.githubusercontent.com/solaghosts/gameUI/main/src/game/assets/sprites/maps/tilesets/actiontiles.png');
+        this.load.image('dungeon', 'https://raw.githubusercontent.com/solaghosts/gameUI/main/src/game/assets/sprites/maps/tilesets/dungeon.png');
 
         // Atlas
-        this.load.atlas('hero', heroImage, heroJson);
+        this.load.atlas('hero', 'https://raw.githubusercontent.com/solaghosts/gameUI/main/src/game/assets/sprites/atlas/hero.png', 'https://raw.githubusercontent.com/solaghosts/gameUI/main/src/game/assets/sprites/atlas/hero.json');
         this.load.atlas('slime', slimeImage, slimeJson);
         this.load.atlas('heart', heartImage, heartJson);
         this.load.atlas('coin', coinImage, coinJson);

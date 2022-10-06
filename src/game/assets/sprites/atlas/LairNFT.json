@@ -1,0 +1,38 @@
+{
+    "name": "Lair NFT",
+    "symbol": "",
+    "description": "Lair Nft",
+    "seller_fee_basis_points": 500,
+    "image": "https://raw.githubusercontent.com/solaghosts/gameUI/main/src/game/assets/sprites/atlas/heroNFT.png",
+    "external_url": "solaghosts.io",
+    "attributes": [
+        {
+            "trait_type": "Location",
+            "value": "Location 1"
+        },
+        {
+            "trait_type": "Size",
+            "value": "Small"
+        }
+    ],
+    "collection": {
+        "name": "Solaghosts lairs",
+        "family": "Solaghosts"
+    },
+    "properties": {
+        "tilemap": "https://raw.githubusercontent.com/solaghosts/gameUI/main/src/game/assets/sprites/maps/houses/home_page_city_house_01.json",
+        "files": [
+            {
+                "uri": "https://raw.githubusercontent.com/solaghosts/gameUI/main/src/game/assets/sprites/atlas/heroNFT.png",
+                "type": "image/png"
+            }
+        ],
+        "category": "image",
+        "creators": [
+            {
+                "address": "DEYF3CftR9GawFjnA3JRh5NVvQCqKEk6eopkFympkH4D",
+                "share": 100
+            }
+        ]
+    }
+}
